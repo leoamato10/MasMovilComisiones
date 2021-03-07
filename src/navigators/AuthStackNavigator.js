@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { SignInScreen, CreateAccountScreen, HomeScreen } from "views";
+import { SignInScreen, CreateAccountScreen } from "views";
 import { BottomTabNavigator } from "navigators";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const AuthStack = createStackNavigator();
 
@@ -15,7 +14,7 @@ const AuthStackNavigator = () => {
         {isSignedIn ? (
           <>
             <AuthStack.Screen
-              name="HomeScreen"
+              name="BottomTabNavigator"
               component={BottomTabNavigator}
             />
           </>
