@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-import { Header } from "molecules";
+// import { Header } from "molecules";
+import Header from "../molecules/Header";
 
 const HomeScreen = () => {
   return (

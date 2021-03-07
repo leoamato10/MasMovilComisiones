@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { Input, Icon, Item, Button } from "native-base";
 import { CustomHeader } from "molecules";
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <CustomHeader />
@@ -89,11 +89,20 @@ const SignInScreen = () => {
                 }}
               >
                 ¿Eres nuevo?,{" "}
-                <Text style={{ color: "#FF4713" }}>Crear Cuenta</Text>
+                <Text
+                  style={{ color: "#FF4713" }}
+                  onPress={() => navigation.navigate("CreateAccountScreen")}
+                >
+                  Crear Cuenta
+                </Text>
               </Text>
             </View>
           </View>
-          <Button full rounded>
+          <Button
+            full
+            rounded
+            onPress={() => navigation.navigate("HomeScreen")}
+          >
             <Text
               style={{
                 fontSize: 24,

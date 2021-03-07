@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
-import MainStackNavigator from "navigators/MainStackNavigator";
+import AuthStackNavigator from "navigators/AuthStackNavigator";
 import { StyleProvider } from "native-base";
 import getTheme from "./native-base-theme/components";
 import material from "./native-base-theme/variables/material";
@@ -16,7 +16,6 @@ const App = () => {
         FuturaPTHeavy: require("./assets/FuturaPTHeavy.otf"),
       });
     }
-    // after the loading set the font status to true
     loadFont().then(() => {
       setFontReady(true);
     });
@@ -30,7 +29,7 @@ const App = () => {
 
   return (
     <StyleProvider style={getTheme(material)}>
-      {isFontReady ? <MainStackNavigator /> : <NoFontLoaded />}
+      {isFontReady ? <AuthStackNavigator /> : <NoFontLoaded />}
     </StyleProvider>
   );
 };
