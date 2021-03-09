@@ -1,50 +1,26 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Dimensions } from "react-native";
 import { Input, Icon, Item, Button } from "native-base";
 import { CustomHeader } from "molecules";
+import DefaultStyles from "../../styles/defaultStyles";
+
+const windowHeight = Dimensions.get("window").height;
 
 const SignInScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={DefaultStyles.container}>
       <CustomHeader />
-      <View
-        style={{
-          borderBottomColor: "#707070",
-          borderBottomWidth: 1,
-          width: "80%",
-          paddingVertical: 5,
-          alignSelf: "center",
-          opacity: 0.08,
-        }}
-      />
+      <View style={DefaultStyles.divider} />
       <View style={{ padding: 20 }}>
-        <Text
-          style={{
-            fontSize: 24,
-            fontFamily: "FuturaPTHeavy",
-            color: "#FF4713",
-          }}
-        >
-          Bienvenido
-        </Text>
-        <Text
-          style={{
-            fontSize: 18,
-            fontFamily: "FuturaPTBook",
-            color: "#707070",
-          }}
-        >
+        <Text style={DefaultStyles.boldOrangeText}>Bienvenido</Text>
+        <Text style={DefaultStyles.normalText}>
           Ingrese al sistema de vendedores
         </Text>
-        <View>
-          <View style={{ paddingVertical: 50 }}>
+        <View style={{ height: "100%", justifyContent: "space-evenly" }}>
+          <View>
             <View>
               <Text
-                style={{
-                  fontSize: 24,
-                  fontFamily: "FuturaPTBook",
-                  color: "#FF4713",
-                }}
+                style={{ ...DefaultStyles.normalOrangeText, paddingBottom: 15 }}
               >
                 Usuario
               </Text>
@@ -61,17 +37,13 @@ const SignInScreen = ({ navigation }) => {
             </View>
             <View style={{ marginTop: 20 }}>
               <Text
-                style={{
-                  fontSize: 24,
-                  fontFamily: "FuturaPTBook",
-                  color: "#FF4713",
-                }}
+                style={{ ...DefaultStyles.normalOrangeText, paddingBottom: 15 }}
               >
                 Contraseña
               </Text>
 
               <Item rounded style={{ borderRadius: 10 }}>
-                <Input />
+                <Input secureTextEntry />
                 <Icon
                   type="FontAwesome5"
                   active
@@ -81,9 +53,7 @@ const SignInScreen = ({ navigation }) => {
               </Item>
               <Text
                 style={{
-                  fontSize: 18,
-                  fontFamily: "FuturaPTBook",
-                  color: "#707070",
+                  ...DefaultStyles.normalText,
                   textAlign: "right",
                   marginTop: 10,
                 }}
@@ -103,28 +73,19 @@ const SignInScreen = ({ navigation }) => {
             rounded
             onPress={() => navigation.navigate("HomeScreen")}
           >
-            <Text
-              style={{
-                fontSize: 24,
-                fontFamily: "FuturaPTBook",
-                color: "#fff",
-              }}
-            >
-              Iniciar Sesión
-            </Text>
+            <Text style={DefaultStyles.buttonText}>Iniciar Sesión</Text>
           </Button>
+          <Text
+            style={{
+              ...DefaultStyles.normalText,
+              textAlign: "center",
+              paddingBottom: windowHeight / 6,
+            }}
+          >
+            ¿Necesitas Ayuda?
+          </Text>
         </View>
       </View>
-      <Text
-        style={{
-          fontSize: 18,
-          fontFamily: "FuturaPTBook",
-          color: "#707070",
-          alignSelf: "center",
-        }}
-      >
-        ¿Necesitas Ayuda?
-      </Text>
     </View>
   );
 };

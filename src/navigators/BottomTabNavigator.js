@@ -1,5 +1,6 @@
 import * as React from "react";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -48,7 +49,26 @@ const PagosScreenStack = () => (
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        inactiveTintColor: "#707070",
+        activeTintColor: "#981D97",
+        style: {
+          height: 70,
+          backgroundColor: "#fff",
+          paddingBottom: 5,
+          borderTopColor: "white",
+          elevation: 0, // for Android
+          shadowOffset: {
+            width: 0,
+            height: 0, // for iOS
+          },
+        },
+        // labelStyle: {
+        //   fontSize: 14,
+        // },
+      }}
+    >
       <Tab.Screen
         name="Home"
         component={HomeScreenStack}
@@ -65,7 +85,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Registrar Chip",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="chip" color={color} size={size} />
+            <FontAwesome5 name="sim-card" color={color} size={size} />
           ),
         }}
       />
