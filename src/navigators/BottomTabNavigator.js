@@ -11,6 +11,7 @@ import {
   Noticias,
   Pagos,
 } from "views";
+import { DefaultStyles } from "styles";
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();

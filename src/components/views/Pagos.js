@@ -11,9 +11,10 @@ import {
   Icon,
 } from "native-base";
 import DefaultStyles from "styles/defaultStyles";
-import HeaderMolecules from "molecules/Header";
+
 import { size } from "lodash";
 import moment from "moment/moment";
+import CustomHeader from "../molecules/Header";
 
 const data = [
   {
@@ -27,7 +28,7 @@ const data = [
     saldo: 200.0,
   },
   {
-    simcard: "XXXX101429392121",
+    id: "XXXX101429392121",
     Periodo: "Marzo 2021",
     saldo: 200.0,
   },
@@ -37,7 +38,7 @@ moment.locale("es");
 const Pagos = () => {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
-      <HeaderMolecules />
+      <CustomHeader loggedIn={true} />
       <View style={styles.headerfilter}>
         <Text
           style={{

@@ -11,7 +11,7 @@ const RegistrarChip = () => {
   const [state, setstate] = useState("");
   return (
     <View style={DefaultStyles.container}>
-      <CustomHeader />
+      <CustomHeader loggedIn={true} />
       <Text
         style={{
           ...DefaultStyles.boldOrangeText,

@@ -1,4 +1,4 @@
 import HomeChips from "./homeChips.js";
-import ChipCmp from "./chipCmp.js";
+import ChipsChart from "./ChipsChart.js";
 
-export { HomeChips, ChipCmp };
+export { HomeChips, ChipsChart };

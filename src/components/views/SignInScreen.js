@@ -10,7 +10,7 @@ const SignInScreen = ({ navigation }) => {
   return (
     <View style={DefaultStyles.container}>
       <CustomHeader />
-      <View style={DefaultStyles.divider} />
+
       <View style={{ padding: 20 }}>
         <Text style={DefaultStyles.boldOrangeText}>Bienvenido</Text>
         <Text style={DefaultStyles.normalText}>

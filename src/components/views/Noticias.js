@@ -11,7 +11,7 @@ import {
   Icon,
 } from "native-base";
 import DefaultStyles from "styles/defaultStyles";
-import HeaderMolecules from "molecules/Header";
+import CustomHeader from "molecules/Header";
 import { size, map } from "lodash";
 import moment from "moment/moment";
 
@@ -48,7 +48,7 @@ moment.locale("es");
 const Noticias = () => {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
-      <HeaderMolecules />
+      <CustomHeader loggedIn={true} />
       <View style={styles.headerfilter}>
         <Text
           style={{

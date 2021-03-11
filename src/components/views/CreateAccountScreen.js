@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import {
   Input,
   CheckBox,
@@ -18,7 +18,7 @@ import { DefaultStyles } from "styles";
 const uri =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQ88nDFCxmzQeXgsq22U8pFzGP6_WoytyCg&usqp=CAU";
 
-const CreateAccountScreen = () => {
+const CreateAccountScreen = ({ navigation }) => {
   const [date, setDate] = useState(new Date(1598051730000));
   const [mode, setMode] = useState("date");
   const [show, setShow] = useState(false);
@@ -34,7 +34,7 @@ const CreateAccountScreen = () => {
 
   return (
     <View style={DefaultStyles.container}>
-      <CustomHeader />
+      <CustomHeader navigation={navigation} backButton={true} />
 
       <View>
         {show && (
@@ -48,7 +48,6 @@ const CreateAccountScreen = () => {
         )}
       </View>
 
-      <View style={DefaultStyles.divider} />
       <View style={{ paddingHorizontal: 20 }}>
         <Text style={DefaultStyles.boldOrangeText}>Crear Cuenta</Text>
         <Text style={DefaultStyles.normalText}>
@@ -73,7 +72,7 @@ const CreateAccountScreen = () => {
           >
             Subir Foto
           </Text>
-          <View style={{ marginTop: 20 }}>
+          <ScrollView style={{ marginTop: 20 }}>
             <Item rounded style={{ borderRadius: 10, marginBottom: 5 }}>
               <Input
                 placeholder="Nombre"
@@ -173,7 +172,7 @@ const CreateAccountScreen = () => {
                 }}
               />
             </Item>
-          </View>
+          </ScrollView>
           <View>
             <ListItem>
               <CheckBox checked={false} color="#707070" />
@@ -184,11 +183,7 @@ const CreateAccountScreen = () => {
                 </Text>
               </Body>
             </ListItem>
-            <Button
-              full
-              rounded
-              onPress={() => navigation.navigate("HomeScreen")}
-            >
+            <Button full rounded onPress={() => {}}>
               <Text style={DefaultStyles.buttonText}>Registrar</Text>
             </Button>
           </View>
