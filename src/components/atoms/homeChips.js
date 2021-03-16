@@ -9,7 +9,13 @@ let today = new Date().toISOString().slice(0, 10);
 const HomeChips = () => {
   return (
     <View>
-      <View style={{ flexDirection: "row", paddingVertical: 25 }}>
+      <View
+        style={{
+          flexDirection: "row",
+          paddingVertical: 25,
+          alignItems: "center",
+        }}
+      >
         <Icon
           type="Ionicons"
           name="information-circle-outline"

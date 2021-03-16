@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, TouchableOpacity } from "react-native";
 import {
   Button,
   Icon,
@@ -11,6 +11,7 @@ import {
   Thumbnail,
 } from "native-base";
 import { DefaultStyles } from "styles";
+import { sendWhatsapp } from "utils/Utils";
 
 const uri =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQ88nDFCxmzQeXgsq22U8pFzGP6_WoytyCg&usqp=CAU";
@@ -41,19 +42,20 @@ const CustomHeader = ({ navigation, backButton, loggedIn }) => {
               alignItems: "center",
             }}
           >
-            <View
+            <TouchableOpacity
               style={{
                 alignItems: "center",
                 paddingHorizontal: 10,
               }}
+              onPress={() => sendWhatsapp()}
             >
               <Icon
                 type="FontAwesome"
                 name="whatsapp"
-                style={{ fontSize: 24, color: "#FF4713" }}
+                style={{ fontSize: 30, color: "#FF4713" }}
               />
               <Text style={{ fontSize: 12, color: "#FF4713" }}>Ayuda</Text>
-            </View>
+            </TouchableOpacity>
             <View>
               <Thumbnail
                 small

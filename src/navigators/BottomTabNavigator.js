@@ -10,6 +10,7 @@ import {
   ConsultaChip,
   Noticias,
   Pagos,
+  BarcodeView,
 } from "views";
 import { DefaultStyles } from "styles";
 
@@ -29,6 +30,7 @@ const HomeScreenStack = () => (
 const RegistrarChipScreenStack = () => (
   <RegistrarChipStack.Navigator headerMode="none">
     <RegistrarChipStack.Screen name="HomeScreen" component={RegistrarChip} />
+    <RegistrarChipStack.Screen name="Barcode" component={BarcodeView} />
   </RegistrarChipStack.Navigator>
 );
 const ConsultaChipScreenStack = () => (
