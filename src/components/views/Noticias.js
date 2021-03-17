@@ -19,7 +19,7 @@ const data = [
   {
     id: "XXXX101429392121q",
     image: require("assets/servicios-tv.png"),
-    titulo: "Nueva Prociones en Más Móvil",
+    titulo: "Nueva Promociones en Más Móvil",
     descripcion:
       "Aproveche las nuevas promociones de más móvil, en el mes de enero, solo por este mes estaremos brindando planes totalmente personalizados desde 20 dólares en adelante",
     fecha: new Date(),
@@ -35,7 +35,7 @@ const data = [
   {
     id: "XXXX101429392121b",
     image: require("assets/5g.png"),
-    titulo: "¿Sábes que es 5G?",
+    titulo: "¿Sabes que es 5G?",
     descripcion:
       "Aproveche las nuevas promociones de más móvil, en el mes de enero, solo por este mes estaremos brindando planes totalmente personalizados desde 20 dólares en adelante",
     fecha: new Date(),

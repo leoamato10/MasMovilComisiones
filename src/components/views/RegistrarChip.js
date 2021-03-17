@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import { View, Text, Dimensions, ScrollView, StyleSheet } from "react-native";
-import { Input, Item, Button, Icon } from "native-base";
+import React, { useState, useEffect } from "react";
+import { View, Dimensions, ScrollView, StyleSheet, Modal } from "react-native";
+import { Input, Item, Button, Icon, Text } from "native-base";
 import { CustomHeader } from "molecules";
 import DefaultStyles from "styles/defaultStyles";
 
 let today = new Date().toISOString().slice(0, 10);
 const screenWidth = Dimensions.get("window").width;
 
-const RegistrarChip = () => {
+const RegistrarChip = ({ navigation }) => {
   const [state, setstate] = useState("");
+  const [hasPermission, setHasPermission] = useState(null);
+  const [scanned, setScanned] = useState(false);
+  const [modalVisible, setmodalVisible] = useState(true);
+
   return (
     <View style={DefaultStyles.container}>
       <CustomHeader loggedIn={true} />
@@ -27,6 +31,9 @@ const RegistrarChip = () => {
           type="Ionicons"
           name="camera"
           style={{ fontSize: 80, color: "#707070" }}
+          onPress={() => {
+            navigation.navigate("Barcode");
+          }}
         />
         <Text
           style={{
@@ -37,7 +44,6 @@ const RegistrarChip = () => {
         >
           Presione la camara para escanear el código
         </Text>
-
         <View style={styles.centering}>
           <Item rounded style={{ borderRadius: 10, marginBottom: 5 }}>
             <Input
@@ -89,6 +95,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: "80%",
     marginVertical: 30,
+  },
+  escanner: {
+    flex: 1,
   },
 });
 

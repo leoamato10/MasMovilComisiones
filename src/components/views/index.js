@@ -5,6 +5,7 @@ import RegistrarChip from "./RegistrarChip";
 import ConsultaChip from "./ConsultaChip";
 import Noticias from "./Noticias";
 import Pagos from "./Pagos";
+import BarcodeView from "./Barcode";
 
 export {
   SignInScreen,
@@ -14,4 +15,5 @@ export {
   Noticias,
   ConsultaChip,
   RegistrarChip,
+  BarcodeView,
 };

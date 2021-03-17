@@ -12,7 +12,13 @@ const HomeChips = () => {
   console.log(chips1);
   return (
     <View>
-      <View style={{ flexDirection: "row", paddingVertical: 25 }}>
+      <View
+        style={{
+          flexDirection: "row",
+          paddingVertical: 25,
+          alignItems: "center",
+        }}
+      >
         <Icon
           type="Ionicons"
           name="information-circle-outline"
