@@ -12,8 +12,7 @@ import {
 } from "native-base";
 import { DefaultStyles } from "styles";
 
-const uri =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQ88nDFCxmzQeXgsq22U8pFzGP6_WoytyCg&usqp=CAU";
+const uri = "https://i1.sndcdn.com/artworks-000413131158-fzh264-t500x500.jpg";
 
 const CustomHeader = ({ navigation, backButton, loggedIn }) => {
   return (

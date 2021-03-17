@@ -10,20 +10,16 @@ const data = {
   datasets: [
     {
       data: [50, 45, 28, 40, 60],
+      barColors: ["blue"],
     },
   ],
 };
 
 const chartConfig = {
   backgroundGradientFrom: "#fff",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#fff",
   backgroundGradientToOpacity: 0,
   color: (opacity = 1) => "black",
-  strokeWidth: 2, // optional, default 3
-  barPercentage: 2,
-  useShadowColorFromDataset: false, // optional
-  fillShadowGradient: "#981D97",
+  fillShadowGradient: "blue",
   fillShadowGradientOpacity: 1,
 };
 
@@ -41,7 +37,7 @@ const ChipsChart = () => {
       </Text>
       <ScrollView horizontal>
         <BarChart
-          // style={graphStyle}
+          // style={{ backgroundColor: "red" }}
           data={data}
           width={screenWidth - 40}
           height={220}

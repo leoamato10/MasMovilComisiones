@@ -59,7 +59,15 @@ const ConsultaChip = () => {
         />
       </View>
       <View style={styles.headerbox}>
-        <View style={{ width: "50%" }}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+            marginRight: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -98,7 +106,15 @@ const ConsultaChip = () => {
             </Text>
           </View>
         </View>
-        <View style={{ width: "50%" }}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+            marginRight: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -113,7 +129,7 @@ const ConsultaChip = () => {
                 color: "#981D97",
               }}
             >
-              26.80
+              26
             </Text>
           </View>
           <View
@@ -129,7 +145,7 @@ const ConsultaChip = () => {
                 fontWeight: "bold",
               }}
             >
-              Comisiones
+              Ganancia
             </Text>
           </View>
         </View>
@@ -178,6 +194,7 @@ const styles = StyleSheet.create({
   headerbox: {
     flexDirection: "row",
     marginTop: 20,
+    marginHorizontal: 20,
   },
   headerfilter: {
     flexDirection: "row",

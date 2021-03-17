@@ -1,12 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Icon } from "native-base";
+import { useSelector, useDispatch } from "react-redux";
 
 import DefaultStyles from "../../styles/defaultStyles";
 
 let today = new Date().toISOString().slice(0, 10);
 
 const HomeChips = () => {
+  const chips1 = useSelector((state) => state.chips.chips);
+  console.log(chips1);
   return (
     <View>
       <View style={{ flexDirection: "row", paddingVertical: 25 }}>
@@ -21,7 +24,15 @@ const HomeChips = () => {
         </Text>
       </View>
       <View style={styles.headerbox}>
-        <View style={{ width: "50%" }}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+            marginRight: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -43,11 +54,7 @@ const HomeChips = () => {
               207
             </Text>
           </View>
-          <View
-            style={{
-              paddingTop: 10,
-            }}
-          >
+          <View style={{ height: 50, justifyContent: "center" }}>
             <Text
               style={{
                 ...DefaultStyles.normalOrangeText,
@@ -60,7 +67,14 @@ const HomeChips = () => {
             </Text>
           </View>
         </View>
-        <View style={{ width: "50%" }}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -78,11 +92,7 @@ const HomeChips = () => {
               600
             </Text>
           </View>
-          <View
-            style={{
-              paddingTop: 10,
-            }}
-          >
+          <View style={{ height: 50, justifyContent: "center" }}>
             <Text
               style={{
                 ...DefaultStyles.normalOrangeText,
@@ -96,8 +106,16 @@ const HomeChips = () => {
           </View>
         </View>
       </View>
-      <View style={{ ...styles.headerbox, paddingTop: 15 }}>
-        <View style={{ width: "50%" }}>
+      <View style={styles.headerbox}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+            marginRight: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -116,14 +134,10 @@ const HomeChips = () => {
                 color: "#981D97",
               }}
             >
-              26.80
+              26
             </Text>
           </View>
-          <View
-            style={{
-              paddingTop: 10,
-            }}
-          >
+          <View style={{ height: 50, justifyContent: "center" }}>
             <Text
               style={{
                 ...DefaultStyles.normalOrangeText,
@@ -136,7 +150,14 @@ const HomeChips = () => {
             </Text>
           </View>
         </View>
-        <View style={{ width: "50%" }}>
+        <View
+          style={{
+            width: "50%",
+            backgroundColor: "#d3d3d3",
+            padding: 15,
+            borderRadius: 10,
+          }}
+        >
           <View
             style={{
               justifyContent: "space-evenly",
@@ -151,14 +172,10 @@ const HomeChips = () => {
                 color: "#981D97",
               }}
             >
-              268.00
+              268
             </Text>
           </View>
-          <View
-            style={{
-              paddingTop: 10,
-            }}
-          >
+          <View style={{ height: 50, justifyContent: "center" }}>
             <Text
               style={{
                 ...DefaultStyles.normalOrangeText,
@@ -173,36 +190,14 @@ const HomeChips = () => {
         </View>
       </View>
     </View>
-
-    // <Grid style={{ justifyContent: "center", alignItems: "center" }}>
-    //   <Col
-    //     style={{
-    //       height: 300,
-    //     }}
-    //   >
-    //     <Row>
-    //       <ChipCmp text={"Total registrados"} quantity={"207"} />
-    //     </Row>
-    //     <Row>
-    //       <ChipCmp text={"Total Incentivos"} quantity={"26.80"} />
-    //     </Row>
-    //   </Col>
-    //   <Col style={{ height: 300 }}>
-    //     <Row>
-    //       <ChipCmp text={"Histórico"} quantity={"600"} />
-    //     </Row>
-    //     <Row>
-    //       <ChipCmp text={"Histórico"} quantity={"68.00"} />
-    //     </Row>
-    //   </Col>
-    // </Grid>
   );
 };
 
 const styles = StyleSheet.create({
   headerbox: {
     flexDirection: "row",
-    marginTop: 20,
+    marginTop: 10,
+    marginHorizontal: 20,
   },
   headerfilter: {
     flexDirection: "row",

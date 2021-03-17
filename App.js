@@ -5,6 +5,15 @@ import { StyleProvider } from "native-base";
 import getTheme from "./native-base-theme/components";
 import material from "./native-base-theme/variables/material";
 import * as Font from "expo-font";
+import { createStore, combineReducers } from "redux";
+import { Provider } from "react-redux";
+import chipsReducer from "./src/Store/reducers/chips";
+
+const rootReducer = combineReducers({
+  chips: chipsReducer,
+});
+
+const store = createStore(rootReducer);
 
 const App = () => {
   const [isFontReady, setFontReady] = useState(false);
@@ -23,14 +32,17 @@ const App = () => {
 
   const NoFontLoaded = () => (
     <View style={[styles.container, styles.horizontal]}>
+      <Text>Can´t load fonts</Text>
       <ActivityIndicator size="large" color="#FF4713" />
     </View>
   );
 
   return (
-    <StyleProvider style={getTheme(material)}>
-      {isFontReady ? <AuthStackNavigator /> : <NoFontLoaded />}
-    </StyleProvider>
+    <Provider store={store}>
+      <StyleProvider style={getTheme(material)}>
+        {isFontReady ? <AuthStackNavigator /> : <NoFontLoaded />}
+      </StyleProvider>
+    </Provider>
   );
 };
 

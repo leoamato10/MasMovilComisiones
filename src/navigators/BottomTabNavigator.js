@@ -101,20 +101,6 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Noticias"
-        component={NoticiasScreenStack}
-        options={{
-          tabBarLabel: "Noticias",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="newspaper-variant-outline"
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Pagos"
         component={PagosScreenStack}
         options={{
@@ -122,6 +108,20 @@ const BottomTabNavigator = () => {
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="credit-card"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Noticias"
+        component={NoticiasScreenStack}
+        options={{
+          tabBarLabel: "Noticias",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name="newspaper-variant-outline"
               color={color}
               size={size}
             />

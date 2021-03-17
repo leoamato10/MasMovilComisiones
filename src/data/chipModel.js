@@ -1,4 +1,4 @@
-class Chips {
+class Chip {
   constructor(
     totalRegistrados,
     historicoRegistrados,
@@ -12,4 +12,4 @@ class Chips {
   }
 }
 
-export default Chips;
+export default Chip;

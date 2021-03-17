@@ -21,7 +21,7 @@ const RegistrarChip = () => {
       >
         Escanea el Bar Code del Chip
       </Text>
-      <Icon type="Ionicons" name="barcode-outline" style={styles.iconblack} />
+      {/* <Icon type="Ionicons" name="barcode-outline" style={styles.iconblack} /> */}
       <View style={styles.internalcontainer}>
         <Icon
           type="Ionicons"

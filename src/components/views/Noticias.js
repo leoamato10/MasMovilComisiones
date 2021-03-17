@@ -42,8 +42,6 @@ const data = [
   },
 ];
 
-console.log(data);
-
 moment.locale("es");
 const Noticias = () => {
   return (
