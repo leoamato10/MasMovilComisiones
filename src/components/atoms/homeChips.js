@@ -46,18 +46,18 @@ const HomeChips = () => {
               flexWrap: "wrap",
             }}
           >
-            <Icon
+            {/* <Icon
               type="FontAwesome5"
               name="sim-card"
               style={{ color: "#FF4713" }}
-            />
+            /> */}
             <Text
               style={{
                 ...DefaultStyles.boldOrangeText,
                 color: "#981D97",
               }}
             >
-              207
+              500
             </Text>
           </View>
           <View style={{ height: 50, justifyContent: "center" }}>
@@ -69,7 +69,7 @@ const HomeChips = () => {
                 fontWeight: "bold",
               }}
             >
-              Total de Registrados
+              Total Registros
             </Text>
           </View>
         </View>
@@ -88,14 +88,14 @@ const HomeChips = () => {
               flexWrap: "wrap",
             }}
           >
-            <Icon type="Ionicons" name="cash" style={{ color: "#FF4713" }} />
+            {/* <Icon type="Ionicons" name="cash" style={{ color: "#FF4713" }} /> */}
             <Text
               style={{
                 ...DefaultStyles.boldOrangeText,
                 color: "#981D97",
               }}
             >
-              600
+              $ 600
             </Text>
           </View>
           <View style={{ height: 50, justifyContent: "center" }}>
@@ -107,7 +107,7 @@ const HomeChips = () => {
                 fontWeight: "bold",
               }}
             >
-              Histórico
+              Ganancia Acumulada
             </Text>
           </View>
         </View>
@@ -129,18 +129,18 @@ const HomeChips = () => {
               flexWrap: "wrap",
             }}
           >
-            <Icon
+            {/* <Icon
               type="FontAwesome5"
               name="sim-card"
               style={{ color: "#FF4713" }}
-            />
+            /> */}
             <Text
               style={{
                 ...DefaultStyles.boldOrangeText,
                 color: "#981D97",
               }}
             >
-              26
+              350
             </Text>
           </View>
           <View style={{ height: 50, justifyContent: "center" }}>
@@ -152,7 +152,7 @@ const HomeChips = () => {
                 fontWeight: "bold",
               }}
             >
-              Total de Incentivos
+              Registros Actuales
             </Text>
           </View>
         </View>
@@ -171,14 +171,14 @@ const HomeChips = () => {
               flexWrap: "wrap",
             }}
           >
-            <Icon type="Ionicons" name="cash" style={{ color: "#FF4713" }} />
+            {/* <Icon type="Ionicons" name="cash" style={{ color: "#FF4713" }} /> */}
             <Text
               style={{
                 ...DefaultStyles.boldOrangeText,
                 color: "#981D97",
               }}
             >
-              268
+              $ 268
             </Text>
           </View>
           <View style={{ height: 50, justifyContent: "center" }}>
@@ -190,7 +190,7 @@ const HomeChips = () => {
                 fontWeight: "bold",
               }}
             >
-              Histórico
+              Ganancia Actual
             </Text>
           </View>
         </View>

@@ -42,7 +42,7 @@ const RegistrarChip = ({ navigation }) => {
             textAlign: "center",
           }}
         >
-          Presione la camara para escanear el código
+          Presione la camara para escanear el código del chip
         </Text>
         <View style={styles.centering}>
           <Item rounded style={{ borderRadius: 10, marginBottom: 5 }}>
@@ -58,6 +58,9 @@ const RegistrarChip = ({ navigation }) => {
                 setstate(text);
               }}
               value={state}
+              onFocus={() => {
+                setstate("895070120342");
+              }}
             />
           </Item>
         </View>
